@@ -12,7 +12,9 @@ class GameNetworking {
   private inputSendInterval: number | null = null;
 
   constructor() {
-    this.serverUrl = import.meta.env.VITE_SERVER_URL || 'ws://localhost:8787';
+    const baseUrl = import.meta.env.VITE_SERVER_URL || 'ws://localhost:8787';
+    // Convert https:// to wss:// and http:// to ws:// for WebSocket connections
+    this.serverUrl = baseUrl.replace(/^https:\/\//, 'wss://').replace(/^http:\/\//, 'ws://');
   }
 
   connectToMatchmaker(): Promise<void> {
