@@ -1,0 +1,19 @@
+{
+  "name": "mecha-zero-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["mecha", "multiplayer", "game", "cloudflare", "durable-objects"],
+  "author": "",
+  "license": "ISC",
+  "description": "Mecha-Zero Edge Assault 3D multiplayer game server",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251210.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.53.0"
+  }
+}
